@@ -1,6 +1,9 @@
 # nuty-clut4
 
-> My groundbreaking Nuxt.js project
+## Tech stack
+- Nuxt.js
+- Typescript / Es6
+- Scss
 
 ## Build Setup
 
