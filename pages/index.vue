@@ -1,16 +1,15 @@
 <template>
 	<div class="main-wrap">
-		<Heading></Heading>
+		<Intro></Intro>
+
 	</div>
 </template>
 
-<script>
-
-import Heading from '../components/header';
-
+<script lang="ts">
+import Intro from '@/components/intro.vue'
 export default {
 	components: {
-		Heading
+		Intro
 	}
 }
 </script>

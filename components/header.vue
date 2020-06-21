@@ -1,14 +1,11 @@
 <template>
 	<header class="header">
 		<div class="header__logo">
-			11
+			<img src="https://www.placecage.com/150/70" alt="">
 		</div>
-		<div class="header__tel"></div>
+		<ul class="header__tel">
+			<li>+38 (066) 244 33 33</li>
+			<li>+38 (066) 244 33 33</li>
+		</ul>
 	</header>
 </template>
-<style lang="sass">
-.header
-	background: red
-	height: 100px
-	width: 100px
-</style>

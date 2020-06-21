@@ -1,5 +1,78 @@
+@import 'helpers.scss';
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	&::selection {
+		background: red;
+		color: white
+	}
+}
+body {
+	font-family: 'Roboto', sans-serif;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	display: block;
+}
+
+.main-wrap {
+	max-width: 2400px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px 0;
+	align-items: center;
+	&__logo {
+
+	}
+	&__tel {
+
+	}
+}
+.promo-first {
+	background: $black;
+	padding: 10px 0;
+	p {
+		color: $white;
+		text-align: center;
+		font-size: 14px;
+	}
+}
+.promo-second {
+	@extend .promo-first;
+	background: $red;
+}
+
+.intro {
+	display: flex;
+	&__left, &__right {
+		width: 50%;
+	}
+	&__left {
+		padding: 40px 20px 20px 20px;
+		h1 {
+			color: $darkOlive;
+			font-weight: bold;
+			line-height: 1;
+			margin-bottom: 25px;
+			font-size: 50px;
+			@include titleFont;
+		}
+	}
+	&__right {
+		display: grid;
+		justify-items: end;
+		grid-gap: 0px;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		img {
+			max-width: 100%;
+		}
+	}
 }
