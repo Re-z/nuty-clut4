@@ -1,10 +1,17 @@
 <template>
 	<div class="item">
-		<div class="item__img-wrap">
-			<div class="item__img-prev"></div>
-			<img class="item__img" :src="itemObj.img2" alt="">
-			<div class="item__img-next"></div>
-		</div>
+		<div class="item__inner">
+			<div class="item__img-wrap">
+				<div 
+					class="item__img-prev"
+					@click="prevImg()">
+				</div>
+				<img class="item__img" :src="itemObj.imgs[visibleImgPosition]" alt="">
+				<div 
+					class="item__img-next"
+					@click="nextImg()">
+				</div>
+			</div>
 			<div class="item__rows">
 				<div class="item__rows-visible">
 					<div class="item__row">
@@ -39,14 +46,28 @@
 						<div class="item__row-el text-right">{{itemObj.color}}</div>
 					</div>
 				</div>	
+				<a href="#" class="btn btn_gold item__btn">Подробнее</a>
 			</div>
+		</div>
 	</div>
 </template>
 <script>
 	export default {
 		data() {
 			return {
-
+				visibleImgPosition: 0
+			}
+		},
+		methods: {
+			prevImg () {
+				this.visibleImgPosition--;
+				//creating loop on last img
+				this.visibleImgPosition < 0 ? this.visibleImgPosition = this.itemObj.imgs.length - 1 : null
+			},
+			nextImg() {
+				this.visibleImgPosition++;
+				//creating loop on last img
+				this.visibleImgPosition > this.itemObj.imgs.length - 1 ? this.visibleImgPosition = 0 : null
 			}
 		},
 		props: ['itemObj']

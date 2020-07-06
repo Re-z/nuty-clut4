@@ -2,19 +2,20 @@
 	<div class="main-wrap">
 		<Intro></Intro>
 		<Items></Items>
-		<Footer></Footer>
+		<Popular></Popular>
 	</div>
 </template>
 
 <script lang="ts">
 import Intro from '@/components/intro.vue';
 import Items from '@/components/items.vue';
-import Footer from '@/components/footer.vue';
+import Popular from '@/components/popular.vue';
 export default {
 	components: {
 		Intro,
 		Items,
-		Footer
+	
+		Popular
 	}
 }
 </script>

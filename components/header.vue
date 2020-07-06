@@ -1,5 +1,5 @@
 <template>
-	<header class="header">
+	<header class="header" id="top">
 		<div class="header__logo">
 			<img src="https://www.placecage.com/150/70" alt="">
 		</div>

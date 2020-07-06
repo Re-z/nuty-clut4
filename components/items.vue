@@ -68,9 +68,7 @@ export default {
 		const itemsNumber = 22;
 		for(let iterator = 1; iterator <= itemsNumber; iterator++) {
 			const newObj = {
-				img1: 'https://kengyry.com.ua/image/cache/catalog/fa-1342-3md/389374.970x0-262x334.jpg',
-				img2: 'https://www.placecage.com/262/334',
-				img3: 'https://www.placecage.com/262/335',
+				imgs: ['https://kengyry.com.ua/image/cache/catalog/fa-1342-3md/389374.970x0-262x334.jpg', 'https://www.placecage.com/262/334', 'https://www.placecage.com/262/335'],
 				id: iterator,
 				price: '100грн',
 				name: 'Blablabla' + iterator,
