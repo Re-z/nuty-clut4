@@ -291,6 +291,39 @@ button {
 		
 	}
 }
+
+.testi {
+	&__wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 30px;
+	}
+	&__item {
+		display: grid;
+		border: 1px solid $lightGray;
+		grid-template-columns: 100px 2fr;
+		grid-auto-rows: auto;
+		grid-column-gap: 20px;
+	}
+	&__img {
+		grid-row: 1/4;
+	}
+	&__author {
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	&__time {
+		margin-bottom: 10px;
+		opacity: 0.8;
+		font-size: 12px;
+		font-style: italic;
+	}
+	&__comment {
+	}
+}
+
+
 .to-top {
 	position: fixed;
 	display: block;
