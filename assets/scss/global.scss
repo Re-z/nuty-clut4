@@ -146,6 +146,15 @@ button {
 			color: $darkOlive;
 		}
 	}
+	&_green {
+		background: #090;
+		color: $white;
+		border: 2px solid #090;
+		&:hover {
+			background: $white;
+			color: $darkOlive;
+		}
+	}
 	&_med {
 		padding: 13px 23px;
 		font-size: 12px;
@@ -322,8 +331,77 @@ button {
 	&__comment {
 	}
 }
+.breadcrumbs {
+	padding: 20px 0;
+	display: flex;
+	li:not(:last-of-type) {
+		margin-right: 10px;
+		&:after {
+			display: inline-block;
+			vertical-align: middle;
+			content: '>';
+			margin-left: 10px;
+		}
+	}
+}
+.product {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	&__left {
+		display: grid;
+		grid-template-columns: 150px 1fr;
+	}
+	&__small-img {
+		cursor: pointer;
+		max-width: 150px;
+		max-height: 150px;
+		&.is-active {
+			border-color: red;
+		}
+	}
+	&__big-img {
+		grid-row: 1/4;
+		grid-column: 2/3; 
+	}
+	&__title {
+		font-size: 30px;
+		font-weight: bold;
+	}
+	&__price {
+		font-size: 20px;
+		font-weight: bold;
+		margin: 20px 0 40px 0;
+	}
 
-
+	&__right {
+		padding: 0 30px 30px 30px;
+	}
+	&__divider {
+		margin: 20px 0;
+	}
+	&__features {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-rows: none;
+		grid-column-gap: 20px;
+		&-row {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 5px;
+		}
+		&-el {
+			&:first-of-type {
+				font-weight: bold;
+			}
+		}
+		&-description {
+			margin-top: 20px;
+			grid-column: 1/3;
+		}	
+	}
+	
+}
 .to-top {
 	position: fixed;
 	display: block;
