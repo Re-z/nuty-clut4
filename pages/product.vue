@@ -3,6 +3,7 @@
 		<div class="section-centered">
 			<Breadcrumbs></Breadcrumbs>
 			<Product :item="item"></Product>
+			<Comments></Comments>
 		</div>
 		
 	</div>
@@ -11,6 +12,7 @@
 <script>
 import Breadcrumbs from '@/components/breadcrumbs.vue';
 import Product from '@/components/product/product.vue';
+import Comments from '@/components/comments.vue';
 
 export default {
 	data() {
@@ -20,7 +22,8 @@ export default {
 	},
 	components: {
 		Breadcrumbs,
-		Product
+		Product,
+		Comments
 	},
 	mounted() {
 		this.item =  {

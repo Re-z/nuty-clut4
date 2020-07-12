@@ -1,19 +1,19 @@
 <template>
 	<div class="product">
-		<!-- <div class="product__left" v-if="item">
+		<div class="product__left" v-if="item">
 			<div class="product__small-img.is-active">
-				<img :src="item.imgs[0]" alt="">
+				<img src="https://www.placecage.com/150/150" alt="">
 			</div>
 			<div class="product__small-img">
-				<img :src="item.imgs[2]" alt="">
+				<img src="https://www.placecage.com/150/150" alt="">
 			</div>
 			<div class="product__small-img">
-				<img :src="item.imgs[1]" alt="">
+				<img src="https://www.placecage.com/150/150" alt="">
 			</div>
 			<div class="product__big-img">
-				<img :src="item.imgs[0]" alt="">
+				<img src="https://www.placecage.com/450/450" alt="">
 			</div>
-		</div> -->
+		</div>
 		<div class="product__right">
 			<h1 class="product__title">{{item.name}}</h1>
 			<p class="product__price">{{item.price}}<span>грн</span></p>
