@@ -5,6 +5,11 @@
 - Typescript / Es6
 - Scss
 
+
+## Todo
+- Redesign
+- Rewrite store to modern syntax
+
 ## Build Setup
 
 ``` bash

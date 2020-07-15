@@ -69,12 +69,16 @@ import productRating from '@/components/product/productRating';
 				if(this.name && this.text) {
 					const popupData = {
 						isVisible: true,
-						heading: 'Spasibo',
-						text: 'Bbb lgfgrkmeo joglregkejgoer'
+						title: 'Спасибо за отзыв!',
+						text: 'Ваш комментарий отправлен на модерацию и вскоре будет опубликован.'
 					}
-					this.$store.commit('setInfoPopup', popupData);
-					this.name = this.text = ''; //reset form fields
 					ev.preventDefault(); //prevent page reload
+					//imitation of loading
+					setTimeout(() => {
+						this.$store.commit('setInfoPopup', popupData);
+						this.name = this.text = ''; //reset form fields
+					}, 1500)
+					
 				}
 
 			}

@@ -8,7 +8,7 @@
 		<About>
 			<h2 class="section-title">Про нас</h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum aspernatur quibusdam repellat corrupti doloremque nam mollitia atque tenetur expedita.</p>
-			<img src="https://www.placecage.com/200/200" alt="">
+			<img src="@/assets/img/woman.jpeg" alt="">
 			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam illum doloribus hic magni earum, saepe quod modi, nihil exercitationem iure reprehenderit ratione amet possimus optio. Ut amet sapiente incidunt vitae tempora illo sint magnam perspiciatis sunt, unde modi quae porro tempore, assumenda eos nam omnis in commodi optio quos rem.</p>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ipsa soluta repellat est sed nemo asperiores at molestiae dignissimos, hic quo labore reprehenderit. At aliquid natus corrupti voluptas velit rem?</p>
 			<ul>
@@ -23,7 +23,9 @@
 
 		<Footer></Footer>
 		<ToTopBtn></ToTopBtn>
-
+		<InfoPopup
+			v-if="infoPopupData.isVisible"
+			:popupData="infoPopupData"></InfoPopup>
 	</div>
 </template>
 <script>
@@ -34,15 +36,27 @@ import PromoSecond from '@/components/promo-second';
 import Footer from '@/components/footer.vue';
 import About from '@/components/about.vue';
 import ToTopBtn from '@/components/toTop.vue';
+import InfoPopup from '@/components/popups/infoPopup.vue';
 
 export default {
+	data() {
+		return {
+
+		}
+	},
 	components: {
 		Heading,
 		PromoFirst,
 		PromoSecond,
 		Footer,
 		About,
-		ToTopBtn
-	}
+		ToTopBtn,
+		InfoPopup
+	},
+	computed: {
+		infoPopupData() {
+			return this.$store.getters.getInfoPopup
+		}
+	},
 }
 </script>

@@ -8,14 +8,14 @@ new Vuex.Store({
 	state: {
 		infoPopup: {
 			isVisible: false,
-			heading: '',
+			title: '',
 			text: '',
 		}
 	},
 	mutations: {
 		setInfoPopup(state, payload) {
 			state.infoPopup.isVisible = payload.isVisible;
-			state.infoPopup.heading = payload.heading;
+			state.infoPopup.title = payload.title;
 			state.infoPopup.text = payload.text;
 		}
 	},
@@ -23,7 +23,7 @@ new Vuex.Store({
 		getInfoPopup(state) {
 			return state.infoPopup
 		}
-	}
+	},
 })
 
 export default store
