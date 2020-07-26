@@ -23,7 +23,6 @@ export default {
 		}
 	},
 	computed: {
-	
 		currentItem() {
 			return ItemsDB.find(item => item.id == this.id);
 		}

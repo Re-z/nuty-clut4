@@ -1,18 +1,26 @@
 <template>
 	<div class="product">
 		<div class="product__left" v-if="item">
-			<div class="product__small-img.is-active">
-				<img :src="item.imgs[0]" alt="">
+
+			<div
+				v-for="img in item.imgs"
+				:key="img"
+				class="product__small-img"
+				@click="changeActiveImg"
+				:class="{'is-active': img === activeImg}"
+				>
+				<img :src="img" alt="">
 			</div>
-			<div class="product__small-img">
+			<div class="product__big-img">
+				<img :src="activeImg" alt="">
+			</div>
+			<!-- <div class="product__small-img">
 				<img :src="item.imgs[1]" alt="">
 			</div>
 			<div class="product__small-img">
 				<img :src="item.imgs[2]" alt="">
 			</div>
-			<div class="product__big-img">
-				<img :src="item.imgs[0]" alt="">
-			</div>
+			 -->
 		</div>
 		<div class="product__right">
 			<h1 class="product__title">{{item.name}}</h1>
@@ -57,7 +65,13 @@
 	export default {
 		data() {
 			return {
-
+				activeImg: this.item.imgs[0]
+			}
+		},
+		methods: {
+			changeActiveImg(ev) {
+				const clickedImg = ev.target.getAttribute('src')
+				this.activeImg = clickedImg;				
 			}
 		},
 		props: [
