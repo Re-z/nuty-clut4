@@ -1,11 +1,11 @@
 <template>
 	<div class="wrap">
 		<div class="section-centered">
+			<h1>{{this.$route.params.id}}</h1>
 			<Breadcrumbs></Breadcrumbs>
-			<Product :item="item"></Product>
+			<Product :item="currentItem"></Product>
 			<Comments></Comments>
 		</div>
-		
 	</div>
 </template>
 
@@ -14,10 +14,18 @@ import Breadcrumbs from '@/components/breadcrumbs.vue';
 import Product from '@/components/product/product.vue';
 import Comments from '@/components/comments.vue';
 
+import ItemsDB from '@/assets/js/base.js'
+
 export default {
 	data() {
 		return {
-			item: {}
+			id: this.$route.params.id
+		}
+	},
+	computed: {
+	
+		currentItem() {
+			return ItemsDB.find(item => item.id == this.id);
 		}
 	},
 	components: {
@@ -25,20 +33,5 @@ export default {
 		Product,
 		Comments
 	},
-	mounted() {
-		this.item =  {
-			imgs: ['400/400', '150/150', '150/151'],
-			id: 1123,
-			price: '100',
-			name: 'Blablabla',
-			code: 112451,
-			size: '10/20/30',
-			color: 'red',
-			leather: 'Натуральная кожа',
-			leatherType: 'Свинная кожа',
-			avaliable: 'Есть в наличии',
-			description: 'Blabla bla this is big description'
-		};
-	}
 }
 </script>

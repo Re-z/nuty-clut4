@@ -34,14 +34,14 @@
 
 <script>
 import Item from '@/components/item.vue';
+import ItemsDB from '@/assets/js/base'
 export default {
 	data() {
 		return {
 			itemsToPrint: [], //items that will be displayed initialy in DOM,
 			numberOfPrintedItems: 15,
-			allItems: [], //all items recieved from DB 
+			allItems: ItemsDB, //all items recieved from DB 
 			itemsCounter: 0, //number items that will be displayed initialy in DOM,
-
 		}
 	},
 	computed: {
@@ -65,21 +65,6 @@ export default {
 	},
 
 	mounted() {
-		const itemsNumber = 22;
-		for(let iterator = 1; iterator <= itemsNumber; iterator++) {
-			const newObj = {
-				imgs: ['https://kengyry.com.ua/image/cache/catalog/fa-1342-3md/389374.970x0-262x334.jpg', 'https://www.placecage.com/262/334', 'https://www.placecage.com/262/335'],
-				id: iterator,
-				price: '100грн',
-				name: 'Blablabla' + iterator,
-				code: iterator + 111,
-				size: '10/20/30',
-				color: 'red',
-				leather: 'Натуральная кожа',
-				leatherType: 'Свинная кожа'
-			};
-			this.allItems.push(newObj);
-		};
 		this.showMoreItems()
 	}
 }

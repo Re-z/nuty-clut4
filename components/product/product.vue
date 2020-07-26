@@ -2,16 +2,16 @@
 	<div class="product">
 		<div class="product__left" v-if="item">
 			<div class="product__small-img.is-active">
-				<img src="https://www.placecage.com/150/150" alt="">
+				<img :src="item.imgs[0]" alt="">
 			</div>
 			<div class="product__small-img">
-				<img src="https://www.placecage.com/150/150" alt="">
+				<img :src="item.imgs[1]" alt="">
 			</div>
 			<div class="product__small-img">
-				<img src="https://www.placecage.com/150/150" alt="">
+				<img :src="item.imgs[2]" alt="">
 			</div>
 			<div class="product__big-img">
-				<img src="https://www.placecage.com/450/450" alt="">
+				<img :src="item.imgs[0]" alt="">
 			</div>
 		</div>
 		<div class="product__right">
@@ -63,8 +63,6 @@
 		props: [
 			'item'
 		],
-		mounted() {
-			console.log(this.item);
-		}
+	
 	}
 </script>

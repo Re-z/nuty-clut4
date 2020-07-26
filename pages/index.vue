@@ -3,7 +3,7 @@
 		<Intro></Intro>
 		<Items></Items>
 		<Popular></Popular>
-		<Testimonials></Testimonials>
+		<!-- <Testimonials></Testimonials> -->
 	</div>
 </template>
 
@@ -11,13 +11,16 @@
 import Intro from '@/components/intro.vue';
 import Items from '@/components/items.vue';
 import Popular from '@/components/popular.vue';
-import Testimonials from '@/components/testimonials.vue';
+// import Testimonials from '@/components/testimonials.vue';
 export default {
 	components: {
 		Intro,
 		Items,
-		Testimonials,
+		// Testimonials,
 		Popular
-	}
+	},
+	// mounted() {
+	// 	console.log(this.$route);
+	// }
 }
 </script>

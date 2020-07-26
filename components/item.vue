@@ -1,15 +1,17 @@
 <template>
-	<div class="item">
+	<div class="item"
+		@click="goToProduct"
+	>
 		<div class="item__inner">
 			<div class="item__img-wrap">
 				<div 
 					class="item__img-prev"
-					@click="prevImg()">
+					@click.stop="prevImg()">
 				</div>
 				<img class="item__img" :src="itemObj.imgs[visibleImgPosition]" alt="">
 				<div 
 					class="item__img-next"
-					@click="nextImg()">
+					@click.stop="nextImg()">
 				</div>
 			</div>
 			<div class="item__rows">
@@ -46,7 +48,7 @@
 						<div class="item__row-el text-right">{{itemObj.color}}</div>
 					</div>
 				</div>	
-				<a href="#" class="btn btn_gold item__btn">Подробнее</a>
+				<button class="btn btn_gold item__btn">Подробнее</button>
 			</div>
 		</div>
 	</div>
@@ -59,6 +61,14 @@
 			}
 		},
 		methods: {
+			goToProduct() {
+				this.$router.push({
+					path: `/products/${this.itemObj.id}`,
+					params: {
+						id: this.itemObj.id
+					}
+				})
+			},
 			prevImg () {
 				this.visibleImgPosition--;
 				//creating loop on last img
