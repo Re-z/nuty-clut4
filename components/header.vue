@@ -1,5 +1,5 @@
 <template>
-	<header class="header" id="top">
+	<header class="header">
 		<nuxt-link to="/" class="header__logo">
 			<img src="https://www.placecage.com/150/70" alt="">
 		</nuxt-link>

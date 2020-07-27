@@ -1,7 +1,14 @@
 <template>
 	<ul class="breadcrumbs">
 			<li><nuxt-link to="/">Главная</nuxt-link></li>
-			<li>Товар</li>
+			<li>{{item.name}}</li>
 	</ul>
-</template>
 
+</template>
+<script>
+export default {
+	props: [
+		'item'
+	]
+}
+</script>

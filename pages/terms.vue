@@ -1,11 +1,5 @@
 <template>
-	<div class="wrap">
-		<div class="section-centered">
-			<Breadcrumbs :item="currentItem"></Breadcrumbs>
-			<Product :item="currentItem"></Product>
-			<Comments :item="currentItem"></Comments>
-			
-		</div>
+	<div class="main-wrap">
 		<About>
 			<h2 class="section-title">Про нас</h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum aspernatur quibusdam repellat corrupti doloremque nam mollitia atque tenetur expedita.</p>
@@ -20,33 +14,26 @@
 				<li>Lorem ipsum dolor sit amet.</li>
 			</ul>
 		</About>
+		<Popular></Popular>
+
 	</div>
 </template>
 
 <script>
-import Breadcrumbs from '@/components/breadcrumbs.vue';
-import Product from '@/components/product/product.vue';
-import Comments from '@/components/comments.vue';
+
 import About from '@/components/about.vue';
+import Popular from '@/components/popular.vue';
 
-import ItemsDB from '@/assets/js/base.js'
-
+// import Testimonials from '@/components/testimonials.vue';
 export default {
-	data() {
-		return {
-			id: this.$route.params.id
-		}
-	},
-	computed: {
-		currentItem() {
-			return ItemsDB.find(item => item.id == this.id);
-		}
-	},
 	components: {
-		Breadcrumbs,
-		Product,
-		Comments,
-		About
+		About,
+		Popular
+
+		// Testimonials,
 	},
+	// mounted() {
+	// 	console.log(this.$route);
+	// }
 }
 </script>

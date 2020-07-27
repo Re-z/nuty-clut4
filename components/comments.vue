@@ -5,17 +5,25 @@
 		<div class="comments__box">
 
 			<div class="comments__left">
-				<!-- <div class="comments__no">
-					<p>Нету отзывов на этот товар</p>
-				</div> -->
-				<div class="comments__yes">
-					<blockquote class="comment">
+				<div class="comments__yes"
+					v-if="item.comments">
+					<blockquote
+						class="comment"
+						v-for="(comment,index) in item.comments"
+						:key="index">
 						<img src="https://www.placecage.com/100/100" alt="">
-						<h3>Ivan <span>оценил в 5 из 5</span></h3>
-						<time>10/05/2020</time>
-						<p>Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item Bla bla bla very good item</p>
+						<h3>{{comment.author}} <span>оценил в <span>{{comment.rating}}</span> из 5</span></h3>
+						<time>{{comment.time}}</time>
+						<p>{{comment.text}}</p>
 					</blockquote>
 				</div>
+				<div 
+					class="comments__no"
+					v-else>
+					<p>Нету отзывов на этот товар</p>
+				</div>
+
+				
 			</div>
 			<div class="comments__right">
 				<form action="" class="comments__form">
@@ -85,6 +93,9 @@ import productRating from '@/components/product/productRating';
 		},
 		components: {
 			productRating
-		}
+		},
+		props: [
+			'item'
+		]
 	}
 </script>

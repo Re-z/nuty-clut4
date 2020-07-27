@@ -42,6 +42,10 @@ button {
 	cursor: pointer;
 
 }
+.html-root {
+	padding-top: 90px;
+	position: relative;
+}
 .main-wrap {
 	max-width: 2400px;
 }
@@ -51,6 +55,13 @@ button {
 	justify-content: space-around;
 	padding: 10px 0;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background: white;
+	box-shadow: 1px 1px 8px black;
 	&__logo {
 
 	}
@@ -291,18 +302,17 @@ button {
 	}
 	&__links {
 		display: flex;
-		li:not(:last-of-type) {
-			margin-right: 10px;
-			a {
-				color: white;
-				font-weight: bold;
-				font-size: 16px;
-				&:hover {
-					text-decoration: underline;
-				}
+		a {
+			color: white;
+			font-weight: bold;
+			font-size: 16px;
+			&:hover {
+				text-decoration: underline;
 			}
 		}
-		
+		li:not(:last-of-type) {
+			margin-right: 10px;
+		}
 	}
 }
 
@@ -355,12 +365,12 @@ button {
 	grid-gap: 30px;
 	&__left {
 		display: grid;
-		grid-template-columns: 150px 1fr;
+		// grid-template-columns: 150px 1fr;
 	}
 	&__small-img {
 		cursor: pointer;
-		max-width: 150px;
-		max-height: 150px;
+		// max-width: 150px;
+		// max-height: 150px;
 		position: relative;
 		&.is-active {
 			z-index: 1;
@@ -368,7 +378,7 @@ button {
 		}
 	}
 	&__big-img {
-		grid-row: 1/4;
+		// grid-row: 1/4;
 		grid-column: 2/3; 
 		width: 450px;
 	}
@@ -462,6 +472,7 @@ button {
 	padding-left: 120px;
 	position: relative;
 	border-bottom: 1px solid #f5f1ec;
+	margin-bottom: 20px;
 	img {
 		position: absolute;
 		left: 0;
@@ -522,6 +533,7 @@ button {
 	right: 0;
 	bottom: 0;
 	background: rgba(0,0,0, .7);
+	z-index: 999;
 }
 .popup {
 	background: white;

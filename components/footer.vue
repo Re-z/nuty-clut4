@@ -2,11 +2,12 @@
 	<footer class="footer">
 		<div class="footer__left">
 			<ul class="footer__links">
-				<li><a href="">bla bla</a></li>
-				<li><a href="">bla bla</a></li>
-				<li><a href="">bla bla</a></li>
-				<li><a href="">bla bla</a></li>
-				<li><a href="">bla bla</a></li>
+				<li>
+					<nuxt-link to="/">Home</nuxt-link>
+				</li>
+				<li>
+					<nuxt-link exact to="/terms">Terms</nuxt-link>
+				</li>
 			</ul>
 		</div>
 		<div class="footer__right text-right">
