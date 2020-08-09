@@ -41,7 +41,74 @@ import i3018 from '@/assets/img/items/301-8.jpg';
 import i6011 from '@/assets/img/items/601-1.jpg';
 import i6012 from '@/assets/img/items/601-2.jpg';
 import i6014 from '@/assets/img/items/601-4.jpg';
+import i6015 from '@/assets/img/items/601-5.jpg';
+import i6016 from '@/assets/img/items/601-6.jpg';
 
+import i2131 from '@/assets/img/items/213-1.jpg';
+import i2134 from '@/assets/img/items/213-4.jpg';
+import i2135 from '@/assets/img/items/213-5.jpg';
+import i2137 from '@/assets/img/items/213-7.jpg';
+
+import i5751 from '@/assets/img/items/575-1.jpg';
+import i5752 from '@/assets/img/items/575-2.jpg';
+import i5754 from '@/assets/img/items/575-4.jpg';
+import i5755 from '@/assets/img/items/575-5.jpg';
+import i5756 from '@/assets/img/items/575-6.jpg';
+import i5759 from '@/assets/img/items/575-9.jpg';
+import i57510 from '@/assets/img/items/575-10.jpg';
+
+import i9771 from '@/assets/img/items/977-1.jpg';
+import i9772 from '@/assets/img/items/977-2.jpg';
+import i9773 from '@/assets/img/items/977-3.jpg';
+import i9774 from '@/assets/img/items/977-4.jpg';
+import i9775 from '@/assets/img/items/977-5.jpg';
+
+import i5112 from '@/assets/img/items/511-2.jpg';
+import i5113 from '@/assets/img/items/511-3.jpg';
+import i5117 from '@/assets/img/items/511-7.jpg';
+import i5118 from '@/assets/img/items/511-8.jpg';
+import i5119 from '@/assets/img/items/511-9.jpg';
+import i51110 from '@/assets/img/items/511-10.jpg';
+import i51111 from '@/assets/img/items/511-12.jpg';
+
+import i1771 from '@/assets/img/items/177-1.jpg';
+import i1772 from '@/assets/img/items/177-2.jpg';
+import i1773 from '@/assets/img/items/177-3.jpg';
+import i1774 from '@/assets/img/items/177-4.jpg';
+import i1775 from '@/assets/img/items/177-5.jpg';
+
+import i7011 from '@/assets/img/items/701-1.jpg';
+import i7012 from '@/assets/img/items/701-2.jpg';
+import i7015 from '@/assets/img/items/701-5.jpg';
+import i7016 from '@/assets/img/items/701-6.jpg';
+import i7018 from '@/assets/img/items/701-8.jpg';
+
+import i3331 from '@/assets/img/items/333-1.jpg';
+import i3333 from '@/assets/img/items/333-3.jpg';
+import i3334 from '@/assets/img/items/333-4.jpg';
+import i3335 from '@/assets/img/items/333-5.jpg';
+import i3336 from '@/assets/img/items/333-6.jpg';
+
+import i1221 from '@/assets/img/items/122-1.jpg';
+import i1222 from '@/assets/img/items/122-2.jpg';
+import i1223 from '@/assets/img/items/122-3.jpg';
+import i1224 from '@/assets/img/items/122-4.jpg';
+import i1225 from '@/assets/img/items/122-5.jpg';
+import i1226 from '@/assets/img/items/122-6.jpg';
+
+import i9221 from '@/assets/img/items/922-1.jpg';
+import i9223 from '@/assets/img/items/922-3.jpg';
+import i9224 from '@/assets/img/items/922-4.jpg';
+import i9225 from '@/assets/img/items/922-5.jpg';
+import i9227 from '@/assets/img/items/922-7.jpg';
+import i9228 from '@/assets/img/items/922-8.jpg';
+
+import i1311 from '@/assets/img/items/131-1.jpg';
+import i1313 from '@/assets/img/items/131-3.jpg';
+import i1314 from '@/assets/img/items/131-4.jpg';
+import i1315 from '@/assets/img/items/131-5.jpg';
+import i1316 from '@/assets/img/items/131-6.jpg';
+import i1318 from '@/assets/img/items/131-8.jpg';
 
 
 
@@ -148,7 +215,7 @@ const items = [
 		desc: 'Сумочка из натуральной кожи тёмно коричневого цвета с 3d теснением на металической молнии. Внутри сумки на подкладке карман на молнии. Ручка съемная.',
 	},
 	{
-		imgs: [i6011, i6012, i6014],
+		imgs: [i6011, i6012, i6014,i6015,i6016],
 		id: 601,
 		price: '600',
 		name: 'Салатовая кожанная сумочка',
@@ -160,7 +227,136 @@ const items = [
 		isPopular: false,
 		desc: 'Сумочка из натуральной кожи салатового цвета на молнии спираль. Внутри сумки на подкладке карман на молнии. Ручка съемная.',
 	},
-	
+	{
+		imgs: [i2131, i2134, i2135, i2137],
+		id: 213,
+		price: '600',
+		name: 'Коричневая кожанная сумочка',
+		size: '22/15/5',
+		stickSize: '125',
+		color: 'Коричневый',
+		leather: 'Натуральная кожа',
+		leatherType: 'Овчина',
+		isPopular: false,
+		desc: 'Сумочка стёганная из натуральной кожи коричневого цвета "под шанельку" на молнии спираль. Внутри сумки на подкладке есть карман на молнии. Ручка съемная со вставками из цепочки (серебро).',
+	},
+	{
+		imgs: [i5751, i5752, i5754, i5755, i5756, i5759, i57510],
+		id: 575,
+		price: '600',
+		name: 'Сумка с ярко цветным теснением',
+		size: '23/18/5.5',
+		stickSize: '117',
+		color: 'Чёрный, ярко цветное теснение',
+		leather: 'Натуральная кожа',
+		leatherType: 'Телёнок',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи чёрная, с ярко цветным теснением на металической молнии (серебро). Донышко из гладкой чёрной кожи. Ручка чёрная, съемная.',
+	},
+	{
+		imgs: [i9771, i9772, i9773, i9774, i9775],
+		id: 977,
+		price: '600',
+		name: 'Сумка "под бронзу" с теснением',
+		size: '23/19/5.5',
+		stickSize: '113',
+		color: '"Под бронзу"',
+		leather: 'Натуральная кожа',
+		leatherType: 'Телёнок',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи "под бронзу" с теснением на молнии (спираль). Внутри сумки на подкладке имеется карман на молнии. Ручка чёрная, съемная.',
+	},
+	{
+		imgs: [i5112, i5113, i5117, i5118, i5119,i51110,i51111],
+		id: 977,
+		price: '600',
+		name: '"Розовое золото"',
+		size: '24/18/5',
+		stickSize: '119',
+		color: '"Розовое золото"',
+		leather: 'Натуральная кожа',
+		leatherType: 'Овчина',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи с цветом "розового золота" на металической молнии. Внутри сумки на подкладке карман на молнии. Ручка чёрная, съемная.',
+	},
+	{
+		imgs: [i1771, i1772, i1773, i1774, i1775],
+		id: 177,
+		price: '600',
+		name: '"Тёмное серебро"',
+		size: '24/19/5.5',
+		stickSize: '126',
+		color: 'Тёмно серебрянный',
+		leather: 'Натуральная кожа',
+		leatherType: 'Телёнок',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи тёмно серебрянного цвета с теснением "под змею" на молнии (спираль). Внутри сумки на подкладке карман на молнии. Съемная ручка со вставками цепочки (серебро).',
+	},
+	{
+		imgs: [i7011, i7012, i7015, i7016, i7018],
+		id: 701,
+		price: '600',
+		name: 'Салатовая сумочка из натуральной кожи',
+		size: '26/20/5',
+		stickSize: '119',
+		color: 'Салатовый',
+		leather: 'Натуральная кожа',
+		leatherType: 'Овчина',
+		isPopular: false,
+		desc: 'Сумочка стёганная из натуральной кожи на молнии спираль. Внутри сумки на подкладке карман на молнии. Ручка съемная.',
+	},
+	{
+		imgs: [i3331, i3333, i3334, i3335, i3336],
+		id: 331,
+		price: '600',
+		name: 'Песочная сумочка с напылением под золото',
+		size: '23/18/4',
+		stickSize: '116',
+		color: 'Песочный',
+		leather: 'Натуральная кожа',
+		leatherType: 'Овчина',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи песочного цвета с рельефным напылением под золото на металической молнии (золото). Внутри сумки на подкладке карман на молнии. Ручка съемная.',
+	},
+	{
+		imgs: [i1221, i1222, i1223, i1224, i1225, i1226],
+		id: 122,
+		price: '600',
+		name: 'Сумочка из чёрной перфорированной кожи',
+		size: '24/18/5',
+		stickSize: '116',
+		color: 'Чёрный',
+		leather: 'Натуральная кожа',
+		leatherType: 'Овчина, замш, перфорация',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи черная замшевая с перфорацией на металической молнии (серебро). Внутри сумки на подкладке карман на молнии. Ручка съемная.',
+	},
+	{
+		imgs: [i9221, i9223, i9224, i9225,i9227,i9228],
+		id: 922,
+		price: '600',
+		name: 'Сумочка из натуральной кожи "под питона"',
+		size: '23/18/5',
+		stickSize: '117',
+		color: '"Под питона"',
+		leather: 'Натуральная кожа',
+		leatherType: 'Овчина',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи. Тиснение и окрас "под питона". На металической молнии (золото). Внутри сумки на подкладке карман на молнии. Ручка со вставками из цепочки (золото).',
+	},
+	{
+		imgs: [i1311, i1313, i1314, i1315,i1316,i1318],
+		id: 131,
+		price: '600',
+		name: 'Серебрянная кожанная сумочка',
+		size: '23/18/5',
+		stickSize: '133',
+		color: 'Серебро',
+		leather: 'Натуральная кожа',
+		leatherType: 'Телёнок',
+		isPopular: false,
+		desc: 'Сумочка из натуральной кожи под серебро на металической молнии. Внутри на подкладке карман на молнии. Ручка со вставками из цепочки (серебро).',
+	},
 
 ]
 
